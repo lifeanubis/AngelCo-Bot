@@ -1,0 +1,30 @@
+# ===================================================
+#
+#   This file contains metadata for the application.
+#   You can use this to store variables that change
+#   behavior specific to the application as well and
+#   then import this file to retrieve the information.
+#
+#
+#     /$$$$$$   /$$$$$$   /$$$$$$
+#    |____  $$ /$$__  $$ /$$__  $$
+#     /$$$$$$$| $$  \ $$| $$  \ $$
+#    /$$__  $$| $$  | $$| $$  | $$
+#   |  $$$$$$$| $$$$$$$/| $$$$$$$/
+#    \_______/| $$____/ | $$____/
+#             | $$      | $$
+#             | $$      | $$
+#             |__/      |__/
+#
+#   But make sure that it's not imported in folders
+#   that are supposed to be independent of business logic,
+#   such as 'components'. You can also change things like
+#   introductory banner name and exit message here.
+#
+# ===================================================
+---
+name: raita
+version: 0.0.1
+messages:
+  intro: raita
+  outro: bye.

@@ -1,0 +1,118 @@
+{
+  "name": "raita",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ayush Sharma <code.ayush@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf build",
+    "prepublish": "yarn test",
+    "prestart": "yarn clean",
+    "execute": "node ./build/raita",
+    "test": "jest --config ./jest.config.js --passWithNoTests",
+    "develop": "yarn build && yarn execute",
+    "build": "webpack --env.mode production",
+    "lint": "prettier --write 'src/**/*.{js,jsx}'",
+    "update": "npx npm-check-updates -u --timeout 120000 && yarn install"
+  },
+  "bin": {
+    "raita": "./build/raita"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "boxen": "^4.2.0",
+    "cfonts": "^2.8.5",
+    "chalk": "^4.1.0",
+    "chalk-animation": "^1.6.0",
+    "clear": "^0.1.0",
+    "cli-format": "^3.0.9",
+    "clui": "^0.3.6",
+    "commander": "^5.1.0",
+    "configstore": "^5.0.1",
+    "csvtojson": "^2.0.10",
+    "enquirer": "^2.3.6",
+    "execa": "^4.0.3",
+    "figlet": "^1.5.0",
+    "gradient-string": "^1.2.0",
+    "json2csv": "^5.0.1",
+    "meow": "^7.0.1",
+    "minimist": "^1.2.5",
+    "moment": "^2.27.0",
+    "ora": "^4.0.4",
+    "prompts": "^2.3.2",
+    "puppeteer": "^5.1.0",
+    "ramda": "^0.27.0",
+    "shelljs": "^0.8.4",
+    "shelljs.exec": "^1.1.8",
+    "terminal-link": "^2.1.1",
+    "yargs": "^15.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "nodemon-webpack-plugin": "^4.3.2",
+    "prettier": "^2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.0",
+    "webpack-shell-plugin": "^0.5.0",
+    "ws": "^7.3.1",
+    "yaml-loader": "^0.6.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "printWidth": 120,
+    "overrides": [
+      {
+        "files": "*.sass",
+        "options": {
+          "printWidth": 999
+        }
+      },
+      {
+        "files": "*.mdx",
+        "options": {
+          "tabWidth": 2,
+          "printWidth": 80,
+          "proseWrap": "always"
+        }
+      },
+      {
+        "files": "*.md",
+        "options": {
+          "tabWidth": 2,
+          "printWidth": 80,
+          "proseWrap": "always",
+          "htmlWhitespaceSensitivity": "strict"
+        }
+      },
+      {
+        "files": "*.html",
+        "options": {
+          "htmlWhitespaceSensitivity": "strict"
+        }
+      }
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
+  }
+}
