@@ -2,7 +2,7 @@
   "name": "raita",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Ayush Sharma <code.ayush@gmail.com>",
+  "author": "Shreyansh Sharma <code.shreyansh@gmail.com>",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf build",
